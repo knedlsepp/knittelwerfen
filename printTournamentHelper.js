@@ -63,6 +63,15 @@ function shuffleGenerator(){
 	outputData();
 }
 
+function bestOfGenerator(numIterations){
+	for (var i = 0; i < numIterations; ++i){
+		var tmp = generateTournament(numTeams, numFields, numGroups, true);
+		if (tmp.rounds.length < tournament.rounds.length) 
+			tournament = tmp;
+	}
+	outputData();
+}
+
 function outputData(){
 	updateDuration();
 	var tournamentTablePagePrototype = document.getElementById("tournamentTablePagePrototype");
