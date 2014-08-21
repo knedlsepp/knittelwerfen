@@ -63,13 +63,13 @@ function outputData(){
 	newTable.setAttribute("class","tableStyle");
 	
 	var tableHead = newTable.appendChild(document.createElement('thead'));
-	var tr = tableHead.insertRow();
+	var tr = tableHead.insertRow(-1);
 	for (var i = 0; i < numFields; ++i){
 		var td = tr.insertCell(-1);
 		td.innerHTML = "Feld "+(i+1);
 	}
 	for (var i = 0; i < tournament.rounds.length; ++i){
-		var tr = newTable.insertRow();
+		var tr = newTable.insertRow(-1);
 		for (var j = 0; j < tournament.rounds[i].length; ++j){
 			var td = tr.insertCell(-1);
 			if (tournament.rounds[i][j][0]!=-1){
@@ -95,7 +95,7 @@ function outputData(){
 		var newTable = newTablePage.getElementsByTagName('table')[0];
 		newTable.id = "tournamentTable"+i;
 		for (var j = 0; j < tournament.roundTeamField.length; ++j){
-			var tr = newTable.insertRow();
+			var tr = newTable.insertRow(-1);
 			var td = tr.insertCell(-1);
 			if (tournament.roundTeamField[j][i]!=-1){
 				td.innerHTML = 1+tournament.roundTeamField[j][i];
