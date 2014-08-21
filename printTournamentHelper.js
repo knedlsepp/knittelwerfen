@@ -49,12 +49,22 @@ function updateTournamentName(input) {
 	tournamentname = input.value;
 	outputData();
 }
+function updateDuration(input){
+	var minutesPerGame = document.getElementById('minutesPerGame').value;
+	var durationHours = document.getElementById('durationHours');
+	var durationMinutes = document.getElementById('durationMinutes');
+	
+	var numRounds = (tournament!=null) ? tournament.rounds.length : 0;
+	durationHours.innerHTML = Math.floor(numRounds*minutesPerGame/60);
+	durationMinutes.innerHTML = numRounds*minutesPerGame-60*Math.floor(numRounds*minutesPerGame/60);
+}
 function shuffleGenerator(){
 	tournament = generateTournament(numTeams, numFields, numGroups, true);
 	outputData();
 }
 
 function outputData(){
+	updateDuration();
 	var tournamentTablePagePrototype = document.getElementById("tournamentTablePagePrototype");
 	var myNode = document.getElementById('tables');
 	while (myNode.firstChild) {
