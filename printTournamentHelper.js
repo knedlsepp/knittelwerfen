@@ -89,7 +89,7 @@ function outputData(){
 	var tr = tableHead.insertRow(-1);
 	for (var i = 0; i < numFields; ++i){
 		var td = tr.insertCell(-1);
-		td.innerHTML = "Feld "+(i+1);
+		td.innerHTML = "Bahn "+(i+1);
 	}
 	for (var i = 0; i < tournament.rounds.length; ++i){
 		var tr = newTable.insertRow(-1);

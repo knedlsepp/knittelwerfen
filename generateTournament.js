@@ -100,11 +100,7 @@ function sortByUrgency(availableGames, numUnplayedGames){
 			 - numUnplayedGames[a[0]]
 			 - numUnplayedGames[a[1]];
 		return (tmp) ? tmp : a.position - b.position;
-		if (tmp!=0)
-			return tmp;
-		else
-			return a.position - b.position; 
-			 });
+		});
 	return availableGames;
 };
 function removeTeams(availableGames, teamA, teamB){
