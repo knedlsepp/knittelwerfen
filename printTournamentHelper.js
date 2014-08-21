@@ -49,6 +49,10 @@ function updateTournamentName(input) {
 	tournamentname = input.value;
 	outputData();
 }
+function shuffleGenerator(){
+	tournament = generateTournament(numTeams, numFields, numGroups, true);
+	outputData();
+}
 
 function outputData(){
 	var tournamentTablePagePrototype = document.getElementById("tournamentTablePagePrototype");

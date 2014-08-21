@@ -1,3 +1,22 @@
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function pairTeams(teams){
 	var numTeams = teams.length;
 
@@ -33,7 +52,7 @@ Array.prototype.remove = function(from, to) {
   this.length = from < 0 ? this.length + from : from;
   return this.push.apply(this, rest);
 };
-function schedule(games, numFields){
+function schedule(games, numFields, isShuffle){
 	if (numFields<1){
 		return [];
 	}
@@ -109,7 +128,7 @@ function removeGame(unplayedGames, teamA, teamB){
 
 //////////////
 //////////////
-function generateTournament(numTeams, numFields, numGroups){
+function generateTournament(numTeams, numFields, numGroups, isShuffle){
 	groupSizes = new Array(numGroups);
 	for (var i = 0; i < groupSizes.length; ++i){
 		groupSizes[i] = Math.floor(numTeams/numGroups) + (i<(numTeams%numGroups) ? 1:0);
@@ -126,6 +145,7 @@ function generateTournament(numTeams, numFields, numGroups){
 
 	for (var i = 0; i < groups.length; ++i){
 		var tmp = pairTeams(groups[i]);
+		if (isShuffle) shuffle(tmp);
 		games.push.apply(games, tmp);
 	}
 

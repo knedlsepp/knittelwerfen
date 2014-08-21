@@ -12,6 +12,7 @@
     Herzlich Willkommen zum Knedlsepp'schen Turniergenerator!
     Bitte geben Sie unten die nötigen Daten ein.
     Es wird ein innerhalb der Gruppen ein Jeder-gegen-Jeden Turnier generiert.
+    Beste Druckergebnisse im Querformat.
     Ich wünsche viel Spass!
     <hr \>
     </div>
@@ -20,6 +21,7 @@
 		Anzahl Teams:<input value="1" type="number" min="1" max="99" onkeyup="updatenumTeams(this);" onchange="updatenumTeams(this);" id="numTeams"><br>
     	Anzahl Spielfelder:<input value="1" type="number" min="1" max="50" onkeyup="updatenumFields(this);" onchange="updatenumFields(this);" id="numFields"><br>
 		Anzahl Gruppen:<input value="1" type="number" min="1" max="50" onkeyup="updatenumGroups(this);" onchange="updatenumGroups(this);" id="numGroups"><br>
+		Plan nicht zufriedenstellend?: <input type="submit" onclick="shuffleGenerator()" value=" Shake it! ">
 		<div id="teamArea">
 		</div>
 	<hr/>
