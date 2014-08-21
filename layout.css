@@ -1,0 +1,19 @@
+@media all {
+	.page-break	{ display: none; }
+	.tableStyle { 
+		text-align: center; 
+		line-height: 1.8;  
+		border: 1px solid black;
+		border-collapse:collapse;
+	}
+}
+@media print {
+	@page {size: landscape}
+	.noprint { display: none;}
+	.page-break	{ display: block; page-break-before: always; }
+}
+
+.pause { 
+	background-color: #F0F0F0; 
+	line-height:1; font-size: 100%;
+}

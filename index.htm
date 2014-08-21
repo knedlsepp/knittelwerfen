@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<meta charset="utf-8">
+<html>
+    <head>
+	<title>Knedlsepp's Turniergenerator</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="generateTournament.js"></script>
+	<script type="text/javascript" src="printTournamentHelper.js"></script>
+    </head>
+    <body>
+    <div class="Introduction noprint">
+    Herzlich Willkommen zum Knedlsepp'schen Turniergenerator!
+    Bitte geben Sie unten die nötigen Daten ein.
+    Es wird ein innerhalb der Gruppen ein Jeder-gegen-Jeden Turnier generiert.
+    Ich wünsche viel Spass!
+    <hr \>
+    </div>
+    <div class="noprint">
+		Turniername:<input value="3. Neuhofner Knittelturnier" size="50" onkeyup="updateTournamentName(this);" onchange="updateTournamentName(this);" id="tournamentname"><br>
+		Anzahl Teams:<input value="1" type="number" min="1" max="99" onkeyup="updatenumTeams(this);" onchange="updatenumTeams(this);" id="numTeams"><br>
+    	Anzahl Spielfelder:<input value="1" type="number" min="1" max="50" onkeyup="updatenumFields(this);" onchange="updatenumFields(this);" id="numFields"><br>
+		Anzahl Gruppen:<input value="1" type="number" min="1" max="50" onkeyup="updatenumGroups(this);" onchange="updatenumGroups(this);" id="numGroups"><br>
+		<div id="teamArea">
+		</div>
+	<hr/>
+	</div>	
+	<div id="tables">
+	<!-- HERE GO THE TABLES -->
+	</div>
+	<!-- INVISIBLE PROTOTYPE -->
+	<div style="display:none;" id="tournamentTablePagePrototype">
+	<div style="height=10pt">
+		<h2><div class="tournamentname"></div></h2>
+		<h3><div class="teamname"></div></h3>
+	</div>
+	<table class="tableStyle" border="1" id="tournamentTablePrototype">
+		<colgroup>
+			<col width="1%">
+			<col width="8%">
+			<col width="8%">
+			<col span=6 width="2%">
+			<col span=6 width="2%">
+			<col width="4%">
+			<col width="4%">
+			<col width="4%">
+			<col width="4%">
+			<col width="10%">
+		</colgroup>
+		<thead>
+			<tr class='warning'>
+				<th>Bahn</th>
+				<th>Service</th>
+				<th>Return</th>
+				<th colspan="6">Eigene Punkte</th>
+				<th colspan="6">Gegner Punkte</th>
+				<th>Eigene Summe</th>
+				<th>Gegner Summme</th>
+				<th>Eigene Spielpunkte</th>
+				<th>Gegner Spielpunkte</th>
+				<th>Unterschrift Gegner</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<hr class="noprint"\>
+	<div class="page-break"></div>
+	</div>
+</body>
+</html>
