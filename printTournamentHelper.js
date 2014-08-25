@@ -126,7 +126,7 @@ function outputData(){
 				td.innerHTML = teams[tournament.rounds[j][tournament.roundTeamField[j][i]][0]];
 				var td = tr.insertCell(-1);
 				td.innerHTML = teams[tournament.rounds[j][tournament.roundTeamField[j][i]][1]];
-				for (var k = 0; k < 17; ++k){
+				for (var k = 0; k < 15; ++k){
 					var td = tr.insertCell(-1);
 				}
 			}else{

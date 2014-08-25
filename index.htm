@@ -21,7 +21,7 @@
 		Anzahl Teams:<input value="1" type="number" min="1" max="99" onkeyup="updatenumTeams(this);" onchange="updatenumTeams(this);" id="numTeams"><br>
     	Anzahl Spielfelder:<input value="1" type="number" min="1" max="50" onkeyup="updatenumFields(this);" onchange="updatenumFields(this);" id="numFields"><br>
 		Anzahl Gruppen:<input value="1" type="number" min="1" max="50" onkeyup="updatenumGroups(this);" onchange="updatenumGroups(this);" id="numGroups"><br>
-		Plan nicht zufriedenstellend?: <input type="submit" onclick="shuffleGenerator()" value=" Shake it! "><input type="submit" onclick="bestOfGenerator(1000);" value=" Shortest of 1000 Random ones."><br>
+		Plan nicht zufriedenstellend?: <input type="submit" onclick="shuffleGenerator()" value=" Shake it! "><input type="submit" onclick="bestOfGenerator(1000);" value=" Shortest of 1000 Random ones. "><br>
 		Dauer des Spiels: <b id="durationHours">0</b> Stunden und <b id="durationMinutes">0</b> Minuten bei <input id="minutesPerGame" type="number" onkeyup="updateDuration(this);" onchange="updateDuration(this);"> Minuten pro Runde.
 		<div id="teamArea">
 		</div>
@@ -41,8 +41,8 @@
 			<col width="1%">
 			<col width="8%">
 			<col width="8%">
-			<col span=6 width="2%">
-			<col span=6 width="2%">
+			<col span=5 width="2%">
+			<col span=5 width="2%">
 			<col width="4%">
 			<col width="4%">
 			<col width="4%">
@@ -54,12 +54,12 @@
 				<th>Bahn</th>
 				<th>Service</th>
 				<th>Return</th>
-				<th colspan="6">Eigene Punkte</th>
-				<th colspan="6">Gegner Punkte</th>
+				<th colspan="5">Eigene Punkte</th>
+				<th colspan="5">Gegner Punkte</th>
 				<th>Eigene Summe</th>
-				<th>Gegner Summme</th>
-				<th>Eigene Spielpunkte</th>
-				<th>Gegner Spielpunkte</th>
+				<th>Gegner Summe</th>
+				<th>Eigene Kehren</th>
+				<th>Gegner Kehren</th>
 				<th>Unterschrift Gegner</th>
 			</tr>
 		</thead>
